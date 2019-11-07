@@ -25,8 +25,13 @@ public class Viewer extends Canvas {
         g.drawImage(image,0, 0, this.getWidth(), this.getHeight(),null);
     }
 
-    public void chispas() {
-        this.myImage.Chispas();
+    public void repaint() {
+        this.paint(this.getGraphics());
+        myImage.Loop_Fuego();
+    }
+
+    public void Fuego() {
+        this.myImage.Loop_Fuego();
     }
 
 

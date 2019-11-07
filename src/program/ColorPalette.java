@@ -21,7 +21,7 @@ public class ColorPalette {
             colorArray.add(i,Color.black);
         }
 
-        colorArray.set(85, Color.RED);
+        colorArray.set(85, Color.RED.darker());
         colorArray.set(170,Color.YELLOW);
         colorArray.set(254,Color.white);
 

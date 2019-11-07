@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class FireEffect extends JFrame {
-    private Viewer viewer = new Viewer();
+    private static Viewer viewer = new Viewer();
 
     public FireEffect() {
         this.pintarEditor();
@@ -21,11 +21,17 @@ public class FireEffect extends JFrame {
 
     private void pintarCanvas() {
         this.add(viewer);
-        viewer.chispas();
+       // viewer.chispas();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         FireEffect fireEffect = new FireEffect();
+        int cont = 0;
+        while (cont < 500000) {
+            Thread.sleep(100);
+            viewer.repaint();
+
+        }
     }
 
 }
